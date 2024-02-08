@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+
+body {
+  background: #C5D7D9;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main img {
+    width: 200px;
+}
+
+header {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #013440;
+  color: #013440;
+}
+
+#quiz {
+  counter-reset: quiz-item ;
+}
+
+.container {
+  margin-top: 24px;
+  border: 1px solid #013440;
+  border-radius: 6px;
+  overflow: hidden;
+}
+  
+.container h3 {
+  padding: 16px 20px;
+  color: #013440;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #026873;
+}
+
+.container h3::before{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+  border-radius: 50%;
+  font-size: 15px;
+  width: 28px;
+  height: 28px;
+  background: #C5D7D9;
+  flex-shrink: 0;
+}
+
+.container dl {
+  padding: 20px 24px;
+  display: grid;
+  gap: 8px;
+}
+
+.container dl dt {
+  font-size: 14px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #026873;
+}
+
+input {
+  display: flex;
+  all: unset;
+  border: 1px solid #013440;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+input:checked {
+  background-color: rgb(2, 146, 33);
+}
+
+#acertos {
+  text-align: center;
+  padding: 20px;
+  margin-top: 2em;
+  font-size: 25px;
+  background-color: rgb(2, 146, 33);
+}
