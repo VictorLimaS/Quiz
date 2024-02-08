@@ -1,4 +1,3 @@
-<br>
 <h1 align="center">Quiz</h1>
 
 <p align="center">
