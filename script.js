@@ -1,96 +1,276 @@
 // Array de objetos contendo as perguntas, respostas e as respostas corretas
 const perguntas =
-  [ {
-    pergunta: "Qual é o nome do primeiro jogo da série Call of Duty?",
+  [{
+    pergunta: "O que significa AWS?",
     respostas: [
-      "Call of Duty: Modern Warfare",
-      "Call of Duty: Black Ops",
-      "Call of Duty",
+      "Advanced Web Services",
+      "Amazon Web Services",
+      "Automated Web Solutions",
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para armazenamento de objetos?",
+    respostas: [
+      "Amazon S3",
+      "Amazon EC2",
+      "Amazon RDS",
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para escalonamento automático de recursos?",
+    respostas: [
+      "Amazon S3",
+      "Amazon EC2",
+      "AWS Auto Scaling",
     ],
     correta: 2
   },
   {
-    pergunta: "Qual é o nome do protagonista da série Modern Warfare?",
+    pergunta: "Qual serviço da AWS é usado para hospedar sites estáticos?",
     respostas: [
-      "Captain Price",
-      "Soap MacTavish",
-      "Ghost",
-    ],
-    correta: 1
-  },
-  {
-    pergunta: "Qual empresa desenvolveu a série Call of Duty?",
-    respostas: [
-      "Activision",
-      "EA Sports",
-      "Ubisoft",
+      "Amazon S3",
+      "Amazon EC2",
+      "AWS Lambda",
     ],
     correta: 0
   },
   {
-    pergunta: "Qual é o modo de jogo mais popular na série Call of Duty?",
+    pergunta: "Qual serviço da AWS é usado para executar código sem provisionar ou gerenciar servidores?",
     respostas: [
-      "Campanha",
-      "Multijogador",
-      "Zumbis",
+      "Amazon S3",
+      "Amazon EC2",
+      "AWS Lambda",
     ],
-    correta: 1
+    correta: 2
   },
   {
-    pergunta: "Em qual conflito histórico é ambientado o jogo Call of Duty: World at War?",
+    pergunta: "Qual serviço da AWS é usado para monitorar e coletar métricas de recursos da AWS?",
     respostas: [
-      "Segunda Guerra Mundial",
-      "Guerra Fria",
-      "Primeira Guerra Mundial",
+      "Amazon CloudWatch",
+      "Amazon S3",
+      "Amazon EC2",
     ],
     correta: 0
   },
   {
-    pergunta: "Qual é o nome do jogo que introduziu o modo Battle Royale em Call of Duty?",
+    pergunta: "Qual serviço da AWS é usado para provisionar e gerenciar bancos de dados relacionais?",
     respostas: [
-      "Call of Duty: Black Ops 4",
-      "Call of Duty: Warzone",
-      "Call of Duty: Advanced Warfare",
-    ],
-    correta: 1
-  },
-  {
-    pergunta: "Qual é a facção inimiga principal em Call of Duty: Modern Warfare 2?",
-    respostas: [
-      "Ultranacionalistas russos",
-      "Exército dos EUA",
-      "Terroristas árabes",
+      "Amazon RDS",
+      "Amazon DynamoDB",
+      "Amazon Redshift",
     ],
     correta: 0
   },
   {
-    pergunta: "Qual é o título mais recente da série Call of Duty lançado em 2021?",
+    pergunta: "Qual serviço da AWS é usado para armazenamento de dados em cache?",
     respostas: [
-      "Call of Duty: Black Ops Cold War",
-      "Call of Duty: Vanguard",
-      "Call of Duty: Modern Warfare",
+      "Amazon S3",
+      "Amazon EC2",
+      "Amazon ElastiCache",
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para distribuir conteúdo para usuários finais com baixa latência?",
+    respostas: [
+      "Amazon S3",
+      "Amazon CloudFront",
+      "Amazon Route 53",
     ],
     correta: 1
   },
   {
-    pergunta: "Qual é o nome do estúdio que desenvolveu Call of Duty: World War II?",
+    pergunta: "Qual serviço da AWS é usado para conectar instâncias EC2 a uma rede virtual privada (VPC)?",
     respostas: [
-      "Sledgehammer Games",
-      "Treyarch",
-      "Infinity Ward",
+      "Amazon Route 53",
+      "Amazon VPC",
+      "AWS Direct Connect",
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para monitorar e auditar o acesso aos recursos da AWS?",
+    respostas: [
+      "AWS IAM",
+      "AWS KMS",
+      "AWS CloudTrail",
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para gerenciar chaves de criptografia?",
+    respostas: [
+      "AWS IAM",
+      "AWS KMS",
+      "AWS CloudHSM",
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para criar e gerenciar clusters de contêineres?",
+    respostas: [
+      "Amazon ECS",
+      "AWS Elastic Beanstalk",
+      "AWS Fargate",
     ],
     correta: 0
   },
   {
-    pergunta: "Qual é a ambientação principal da série Call of Duty: Black Ops?",
+    pergunta: "Qual serviço da AWS é usado para fazer análises de Big Data?",
     respostas: [
-      "Guerra do Vietnã",
-      "Guerra Fria",
-      "Segunda Guerra Mundial",
+      "Amazon S3",
+      "Amazon EMR",
+      "Amazon Redshift",
     ],
     correta: 1
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para transcodificação de vídeos?",
+    respostas: [
+      "Amazon S3",
+      "Amazon Elastic Transcoder",
+      "Amazon CloudFront",
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para realizar testes de carga em aplicações web?",
+    respostas: [
+      "AWS CodeDeploy",
+      "AWS CodePipeline",
+      "AWS Device Farm",
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para realizar análises de segurança em tempo real?",
+    respostas: [
+      "Amazon GuardDuty",
+      "AWS WAF",
+      "AWS Shield",
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para automatizar o processo de deployment de aplicações?",
+    respostas: [
+      "AWS CodeDeploy",
+      "AWS CodeCommit",
+      "AWS CodeBuild",
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para orquestrar e gerenciar contêineres Docker?",
+    respostas: [
+      "Amazon ECS",
+      "AWS Elastic Beanstalk",
+      "AWS Fargate",
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para análises de Business Intelligence (BI)?",
+    respostas: [
+      "Amazon S3",
+      "Amazon Redshift",
+      "Amazon QuickSight",
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para provisionar e gerenciar máquinas virtuais?",
+    respostas: [
+      "Amazon S3",
+      "Amazon EC2",
+      "Amazon RDS",
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para armazenamento de dados em um data warehouse?",
+    respostas: [
+      "Amazon S3",
+      "Amazon DynamoDB",
+      "Amazon Redshift",
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para monitorar e gerenciar redes?",
+    respostas: [
+      "Amazon Route 53",
+      "Amazon VPC",
+      "AWS Direct Connect",
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para fazer backup e recuperação de dados?",
+    respostas: [
+      "Amazon S3",
+      "Amazon Glacier",
+      "AWS Backup",
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para entrega de emails em escala?",
+    respostas: [
+      "Amazon SES",
+      "Amazon SNS",
+      "Amazon SQS",
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para análises de segurança de dados em tempo real?",
+    respostas: [
+      "Amazon Macie",
+      "AWS Security Hub",
+      "Amazon Inspector",
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para registrar nomes de domínio?",
+    respostas: [
+      "Amazon Route 53",
+      "Amazon S3",
+      "Amazon CloudFront",
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para implantação contínua de aplicações?",
+    respostas: [
+      "AWS CodePipeline",
+      "AWS CodeDeploy",
+      "AWS CodeBuild",
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para análises de dados de streaming em tempo real?",
+    respostas: [
+      "Amazon Kinesis",
+      "Amazon SQS",
+      "Amazon SNS",
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual serviço da AWS é usado para monitorar e gerenciar APIs?",
+    respostas: [
+      "Amazon API Gateway",
+      "AWS Lambda",
+      "Amazon Cognito",
+    ],
+    correta: 0
   }
-];
+  ];
 
 // Seleciona o elemento HTML com o id 'quiz'
 const quiz = document.querySelector('#quiz');
